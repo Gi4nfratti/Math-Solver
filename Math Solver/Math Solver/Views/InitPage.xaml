@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:resource="clr-namespace:Math_Solver.Resources" xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob" xmlns:control="clr-namespace:Math_Solver.Views"
+             x:Class="Math_Solver.Views.InitPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="MATH SOLVER" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <Frame Padding="15">
+        <Frame.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#00b4d8"
+                          Offset="0.0" />
+                <GradientStop Color="#48cae4"
+                          Offset="0.4" />
+                <GradientStop Color="#90e0ef"
+                          Offset="0.5" />
+                <GradientStop Color="#FFF"
+                          Offset="0.6" />
+                <GradientStop Color="#FFF"
+                          Offset="0.7" />
+                <GradientStop Color="#FFF"
+                          Offset="0.8" />
+                <GradientStop Color="#FFF"
+                          Offset="0.9" />
+                <GradientStop Color="#FFF"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Frame.Background>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="5">
+                <controls:MTAdView x:Name="ad" AdsId="ca-app-pub-5802669771020789/3555779312"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Padding="10, 30, 10, 50" VerticalOptions="StartAndExpand">
+                <Frame CornerRadius="10" BorderColor="LightSlateGray" Padding="0">
+                    <ScrollView VerticalOptions="Fill" VerticalScrollBarVisibility="Default" HorizontalOptions="Fill" Orientation="Vertical">
+                        <StackLayout x:Name="stackLayoutFavorites" Padding="10"/>
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Padding="10, 30, 10, 50" VerticalOptions="StartAndExpand">
+                <Frame CornerRadius="10" BorderColor="LightSlateGray" Padding="0">
+                    <ScrollView VerticalOptions="Fill" VerticalScrollBarVisibility="Default" HorizontalOptions="Fill" Orientation="Vertical">
+                        <StackLayout x:Name="stackLayoutRecent" Padding="10"/>
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ContentPage>

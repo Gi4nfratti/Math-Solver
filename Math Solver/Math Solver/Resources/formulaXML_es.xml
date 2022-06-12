@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Campo "Area", "Area2", "Area3", "Area4", etc... não traduz os campos. São para saber o que inflar
+	nas categorias e listas.
+	
+	Fluxograma:
+	- formulaList recebe a lista XML
+	- categories filtra pela Tag = Group
+	- Cada frame inflado de category leva o automationId sendo sua Area
+	- Quando selecionado o frame, leva a categoria para CategoryListPage e seleciona
+	todas as fórmulas com aquela Area que foi passada e a Tag = Formula para evitar inflar o botão de categoria
+	junto.
+	- Ao selecionar uma fórmula, é passado o IdName para saber de qual se trata, assim, inflando a fórmula 
+	requisitada.
+	- Quando clicado no botão para resolver a fórmula, é verificado qual é o IdName da fórmula num dicionário de
+	IdNames. Quando encontra ele, invoca a fórmula ligada a este IdName.
+	- Entro em getUrlImages e getUrlExamples e pego a URL pra baixar, dentro dessas funções eu insiro a imageURL 
+	e downloadedImage no bd, faço par chave-valor com o id que recebo por parâmetro com sua respectiva 
+	ImageSource, convertendo-a com o que recebo do convertByteToIimageSource(). 
+	- O imgSource de cada imagem é chamado pelo getImageById, onde recebo da lista imageSources o id da categoria 
+	e seleciono o ImageSource pra apresentar.
+	- Pra eu saber se precisa baixar novamente as imagens eu comparo o count da lista da função GetImages() com o countImages do AppResources.
+	
+	URLImage das Fórmulas: notação da fórmula
+	URLImage das categorias: Ícones pra categoria
+	URLExample das fórmulas: Exemplo solucionado da fórmula
+-->
+
+<MathSolver>
+	<Formulas>
+		<Formula id="1" idName="bhaskara" name="Bhaskara" desc="Resolver Bhaskara" area="Math" hashtag="matematica" tag="Calc" urlImage="https://i.imgur.com/PQyfnSN.jpg" urlExample="https://i.imgur.com/kYQwgp0.png" data="&#x394;|=|entry /b/ pow2endpow|+|-4|*|entry /a/|*|entry /c/|" lines="4|2#pow2@4,6#*@4,8#*@2,4#+" />
+		<Formula id="2" idName="sum" name="Soma" desc="Cálculo para somar dois ou mais valores" area="Math" hashtag="matematica" tag="Calc" urlImage="https://i.imgur.com/PQyfnSN.jpg" urlExample="https://i.imgur.com/kYQwgp0.png" data="|entry /a/|+|entry /b/|" lines="1|1,3#+" />
+		<Formula id="3" idName="subtraction" name="Subtração" desc="Cálculo para subtrair dois ou mais valores" area="Math" hashtag="matematica" tag="Calc" urlImage="https://i.imgur.com/PQyfnSN.jpg" urlExample="https://i.imgur.com/kYQwgp0.png" data="|entry /a/|-|entry /b/|" lines="1|1,3#-" />
+		<Formula id="4" idName="multiplication" name="Multiplicação" desc="Cálculo para multiplicar dois ou mais valores" area="Math" hashtag="matematica" tag="Calc" urlImage="https://i.imgur.com/PQyfnSN.jpg" urlExample="https://i.imgur.com/kYQwgp0.png" data="|entry /a/|*|entry /b/|" lines="1|1,3#*" />
+		<Formula id="5" idName="division" name="Divisão" desc="Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores Cálculo para dividir dois ou mais valores" area="Math" hashtag="matematica" tag="Calc" urlImage="https://i.imgur.com/PQyfnSN.jpg" urlExample="https://i.imgur.com/kYQwgp0.png" data="|entry /a/|/|entry /b/|" lines="1|1,3#/" />
+	</Formulas>
+
+	<Categories>
+		<Category id="1" name="Engenharia Civil" area="Civil Engineering" tag="Group" urlImage="https://i.imgur.com/wZwRL10.png" />
+		<Category id="2" name="Física" area="Physics" tag="Group" urlImage="https://i.imgur.com/wZwRL10.png" />
+		<Category id="3" name="Química" area="Chemistry" tag="Group" urlImage="https://i.imgur.com/wZwRL10.png" />
+		<Category id="4" name="Matemática" area="Math" tag="Group" urlImage="https://i.imgur.com/wZwRL10.png" />
+	</Categories>
+</MathSolver>

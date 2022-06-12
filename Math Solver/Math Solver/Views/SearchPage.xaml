@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Math_Solver.ViewModels"  
+             xmlns:model="clr-namespace:Math_Solver.Models" xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:resource="clr-namespace:Math_Solver.Resources"
+             
+             x:Class="Math_Solver.Views.SearchPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="MATH SOLVER" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <Frame Padding="15">
+        <Frame.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#00b4d8"
+                          Offset="0.0" />
+                <GradientStop Color="#48cae4"
+                          Offset="0.4" />
+                <GradientStop Color="#90e0ef"
+                          Offset="0.5" />
+                <GradientStop Color="#FFF"
+                          Offset="0.6" />
+                <GradientStop Color="#FFF"
+                          Offset="0.7" />
+                <GradientStop Color="#FFF"
+                          Offset="0.8" />
+                <GradientStop Color="#FFF"
+                          Offset="0.9" />
+                <GradientStop Color="#FFF"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Frame.Background>
+        <Frame CornerRadius="10" BorderColor="LightSlateGray" Padding="10">
+            <StackLayout>
+                <SearchBar x:Name="searchBar" HorizontalOptions="FillAndExpand" Placeholder="{x:Static resource:AppResources.searchPlaceholder}" TextChanged="SearchBar_TextChanged"/>
+                <ListView x:Name="listViewSearch" ItemTapped="listViewSearch_ItemTapped" SeparatorVisibility="Default" CachingStrategy="RecycleElementAndDataTemplate"/>
+                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" Margin="2">
+                    <controls:MTAdView x:Name="ad" AdsId="ca-app-pub-5802669771020789/3555779312"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Frame>
+</ContentPage>

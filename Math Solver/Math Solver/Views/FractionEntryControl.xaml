@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="Math_Solver.Views.FractionEntryControl"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="this">
+    <ContentView.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame
+                Padding="20"
+                BorderColor="DodgerBlue"
+                CornerRadius="10">
+                <StackLayout Spacing="0">
+                    <Entry Text="{Binding Source={x:Reference this}, Path=NumeratorText}" WidthRequest="10"
+                           Placeholder="{Binding Source={x:Reference this}, Path=PLNumeratorText}"
+                           MaxLength="9999999" TextColor="Black"
+                           Keyboard="Numeric"  PlaceholderColor="DarkGray"
+                           HorizontalTextAlignment="Center"
+                           />
+                    <BoxView BackgroundColor="Black" HeightRequest="1" />
+                    <Entry Text="{Binding Source={x:Reference this}, Path=DenominatorText}"
+                           Placeholder="{Binding Source={x:Reference this}, Path=PLDenominatorText}"
+                           WidthRequest="10"
+                           MaxLength="9999999" TextColor="Black"
+                           Keyboard="Numeric"  PlaceholderColor="DarkGray"
+                           HorizontalTextAlignment="Center"
+                           />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

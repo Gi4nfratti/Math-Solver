@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resource="clr-namespace:Math_Solver.Resources"
+             x:Class="Math_Solver.Views.SettingsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="MATH SOLVER" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Frame Margin="0" Padding="20" BackgroundColor="WhiteSmoke" CornerRadius="10">
+            <StackLayout>
+                <!--
+                <Grid HorizontalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Grid.Column="1" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" Grid.Column="0" Text="{x:Static resource:AppResources.launchOn}"/>
+                    <input:RadioButtonGroupView x:Name="radioBtnGroup" Grid.Row="2" Grid.Column="0">
+                        <input:RadioButton CircleColor="#00ADB5" Color="#00ADB5" Text="{x:Static resource:AppResources.home}" Grid.Row="3" Grid.Column="0" TextFontSize="Medium"/>
+                        <input:RadioButton CircleColor="#00ADB5" Color="#00ADB5" Text="{x:Static resource:AppResources.categories}" Grid.Row="4" Grid.Column="0" TextFontSize="Medium"/>
+                    </input:RadioButtonGroupView>
+                    <BoxView Grid.Row="5" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="DarkGray"/>
+                    
+                    <Label Grid.Row="3" Grid.Column="0" Text="Idioma:"/>
+                    <Label Grid.Row="3" Grid.Column="0" Text="Modo Escuro"/>
+                    <Switch ThumbColor="#00ADB5" OnColor="#22CFD7" Margin="0,0,10,0" Grid.Row="2" Grid.Column="2" IsToggled="false" />
+                    <Frame CornerRadius="10" Padding="0" BackgroundColor="Transparent" Grid.Row="3" Grid.Column="2">
+                        <Picker x:Name="languagePicker" BackgroundColor="Transparent"  Title="Alterar" HorizontalTextAlignment="Center" SelectedIndexChanged="languagePicker_SelectedIndexChanged" />
+                    </Frame>
+                    <BoxView Grid.Row="4" Grid.ColumnSpan="3" BackgroundColor="DarkGray"/>
+                    <Switch x:Name="themeSwitch" ThumbColor="#00ADB5" OnColor="#22CFD7" Margin="0,0,10,0" Grid.Row="3" Grid.Column="2" Toggled="themeSwitch_Toggled" />
+
+                </Grid>
+                -->
+                <Grid HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" Margin="0,0,0,20">
+                    <Label x:Name="lblAbout" Grid.Row="4" Grid.Column="0" Text="{x:Static resource:AppResources.about}" HorizontalOptions="StartAndExpand" />
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

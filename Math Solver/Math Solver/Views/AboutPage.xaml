@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	         xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:resource="clr-namespace:Math_Solver.Resources"
+             x:Class="Math_Solver.Views.AboutPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="MATH SOLVER" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+        <ToolbarItem IconImageSource="" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+                <StackLayout x:Name="stackPhoto" HeightRequest="100">
+                    <Image x:Name="imgPhoto" Source="aboutPic.jpg"/>
+                </StackLayout>
+                <StackLayout>
+                    <Frame x:Name="frameAbout"
+                        BackgroundColor="WhiteSmoke"
+                        HasShadow="True"
+                        BorderColor="DarkGray"
+                        CornerRadius="10"
+                        HeightRequest="600"
+                        Margin="15,0,15,30">
+                        <StackLayout>
+                            <StackLayout>
+                                <Label x:Name="lblAbout" FontFamily="SFUIDisplay-Regular" Text="{x:Static resource:AppResources.aboutText}" TextColor="#444" FontAttributes="Bold" FontSize="22" Margin="0,0,0,5" Padding="1" HorizontalOptions="StartAndExpand" LineBreakMode="WordWrap" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Frame HorizontalOptions="EndAndExpand" Margin="5,10" CornerRadius="10" BackgroundColor="Transparent" VerticalOptions="EndAndExpand" Padding="0">
+                                <StackLayout x:Name="stackButtons">
+                                    <Grid VerticalOptions="EndAndExpand" HorizontalOptions="Center" Padding="0" Margin="0,0,0,0"  BackgroundColor="Transparent">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center">
+                                            <Frame x:Name="frameLinkedin" HasShadow="False" HeightRequest="50" WidthRequest="50" CornerRadius="100" Margin="10,10" BackgroundColor="Transparent"/>
+
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                                            <Frame x:Name="frameGithub" HasShadow="False" HeightRequest="50" WidthRequest="50" CornerRadius="100" Margin="10,10" BackgroundColor="Transparent"/>
+
+                                        </StackLayout>
+                                        <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="Center">
+                                            <Frame x:Name="frameBehance" HasShadow="False" HeightRequest="50" WidthRequest="50" CornerRadius="100" Margin="10,10" BackgroundColor="Transparent"/>
+
+                                        </StackLayout>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
